@@ -5,7 +5,7 @@ from datetime import datetime
 DATA_DIR = "data"
 PROMPT_FILE = os.path.join(DATA_DIR, "prompts.json")
 FEEDBACK_FILE = os.path.join(DATA_DIR, "feedbacks.json")
-PROMPT_TXT = os.path.join(DATA_DIR, "prompt.txt")  # opcional, para reset padrão
+PROMPT_TXT = os.path.join(DATA_DIR, "prompt.txt")  
 DEFAULT_PROMPT = "Você é um assistente útil e objetivo."
 
 
