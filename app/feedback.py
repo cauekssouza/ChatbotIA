@@ -8,7 +8,7 @@ FEEDBACK_FILE = os.path.join(DATA_DIR, "feedbacks.json")
 PROMPT_TXT = os.path.join(DATA_DIR, "prompt.txt")  # opcional, para reset padrão
 DEFAULT_PROMPT = "Você é um assistente útil e objetivo."
 
-# Garante que a pasta data existe
+
 os.makedirs(DATA_DIR, exist_ok=True)
 
 def load_prompt():
@@ -81,7 +81,7 @@ def load_all_prompts():
     except:
         return []
 
-# -------- novas utilitárias (sem quebrar o que já existe) --------
+
 
 def clear_feedbacks():
     """Apaga todos os feedbacks registrados."""
@@ -98,16 +98,16 @@ def reset_prompt():
     Restaura o prompt inicial padrão (DEFAULT_PROMPT) e grava como último estado em prompts.json.
     Mantém o histórico coerente: adiciona uma entrada com o prompt padrão.
     """
-    # Zera histórico
+    
     with open(PROMPT_FILE, "w", encoding="utf-8") as f:
         json.dump([], f, indent=2, ensure_ascii=False)
 
-    # Regrava uma entrada padrão
+
     prompts = [{"prompt": DEFAULT_PROMPT, "date": datetime.now().isoformat()}]
     with open(PROMPT_FILE, "w", encoding="utf-8") as f:
         json.dump(prompts, f, indent=2, ensure_ascii=False)
 
-    # Opcionalmente mantém um arquivo .txt (se você quiser ler por fora)
+    
     try:
         with open(PROMPT_TXT, "w", encoding="utf-8") as f:
             f.write(DEFAULT_PROMPT)
