@@ -58,7 +58,6 @@ chatbot/
 │
 ├── tests/                     
 │   ├── test_feedback.py
-│   ├── test_gemini.py
 │   ├── test_llm.py
 │   ├── test_tools.py
 │   └── __init__.py
