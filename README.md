@@ -33,42 +33,7 @@ O objetivo é demonstrar habilidades em desenvolvimento de interfaces, integraç
 
 ---
 
-## Estrutura do Projeto
-chatbot/
-├── app/                       
-│   ├── __init__.py
-│   ├── main.py                
-│   ├── llm.py                 
-│   ├── feedback.py            
-│   ├── vector_store.py        
-│   ├── tools.py               
-│   ├── guarda.py              
-│   ├── logger.py             
-│   └── __pycache__/           
-│
-├── data/                      
-│   ├── feedbacks.json        
-│   ├── prompts.json           
-│   └── prompt.txt             
-│
-├── docker/                    
-│
-├── scripts/                   
-│   └── list_models.py         
-│
-├── tests/                     
-│   ├── test_feedback.py
-│   ├── test_llm.py
-│   ├── test_tools.py
-│   └── __init__.py
-│
-├── venv/                      
-│
-├── .env                      
-├── Dockerfile                 
-├── docker-compose.yml        
-├── README.md
-└── requirements.txt                  
+             
 
 # Local
 1. Crie um ambiente virtual:
