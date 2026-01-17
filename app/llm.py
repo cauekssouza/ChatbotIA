@@ -23,7 +23,7 @@ CONTEXTO DA VECTOR STORE:
 {context}
 """
     try:
-        model = genai.GenerativeModel("gemini-1.5-flash")  
+        model = genai.GenerativeModel("models/gemini-2.0-flash")  
         response = model.generate_content(full_prompt)
         return response.text
     except Exception as e:
