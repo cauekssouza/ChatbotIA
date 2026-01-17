@@ -13,7 +13,7 @@ if not API_KEY:
 genai.configure(api_key=API_KEY)
 
 
-client = genai.Client(api_key=API_KEY)
+
 
 
 def ask_gemini(prompt: str, context: str = "") -> str:
