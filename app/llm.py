@@ -17,19 +17,12 @@ genai.configure(api_key=API_KEY)
 
 
 def ask_gemini(prompt: str, context: str = "") -> str:
-    full_prompt = f"""
-Você é um assistente inteligente e objetivo.
-
-PROMPT ATUAL:
-{prompt}
-
-CONTEXTO DA VECTOR STORE:
-{context}
-"""
-
-    response = client.models.generate_content(
-        model="models/gemini-2.5-flash-preview-09-2025",
-        contents=full_prompt,
-    )
-
-    return response.text
+    try:
+        full_prompt = f"{context}\n{prompt}" if context else prompt
+        response = genai.generate_content(
+            model="models/gemini-2.5-flash-preview-09-2025",
+            contents=full_prompt
+        )
+        return response.text
+    except Exception as e:
+        return f"Erro ao consultar Gemini: {e}"
