@@ -1,4 +1,5 @@
 import streamlit as st
+from llm import ask_gemini
 from vector_store import add_to_vector_store, query_vector_store
 from feedback import (
     save_feedback,
